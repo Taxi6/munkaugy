@@ -124,12 +124,99 @@
         <div id="failure-message"></div>
     </div>
     <script>
-        const questions = [
-            // Itt töltsd fel a kérdéseket
-            // Például:
-            { question: "Mi a vállalkozás definíciója?", options: ["A", "B", "C", "D"], correctAnswer: "A" },
-            { question: "Mik a vállalkozás fő típusai?", options: ["X", "Y", "Z", "W"], correctAnswer: "X" },
-            // stb.
+        const quizQuestions = [
+    {
+        question: "Szociális hozzájárulási adó köteles-e a végkielégítés címén kifizetett illetmény?",
+        options: [
+            "Egyéni vállalkozó, társas vállalkozó részére fizetik ki.",
+            "Nem.",
+            "Igen.",
+            "Csak akkor, ha munkaviszonyban álló részére fizetik."
+        ],
+        correctAnswer: "Nem."
+    },
+    {
+        question: "Mely időpont számít a munkaviszony kezdetének?",
+        options: [
+            "A munkaruha átvételének napja.",
+            "Ha a szerződés másképp nem rendelkezik a munkaszerződés megkötését követő nap.",
+            "A munkaszerződés aláírásnak napja.",
+            "A munkaköri leírás átvételének napja."
+        ],
+        correctAnswer: "Ha a szerződés másképp nem rendelkezik a munkaszerződés megkötését követő nap."
+    },
+    {
+        question: "A társadalombiztosítás rendszerében mi minősül járuléknak az alábbi közbevételek közül?",
+        options: [
+            "Egészségbiztosítási járulék.",
+            "Személyi jövedelemadó.",
+            "Egyszerűsített vállalkozó adó.",
+            "Társasági adó."
+        ],
+        correctAnswer: "Egészségbiztosítási járulék."
+    },
+    {
+        question: "Mikor jár a munkavállalónak munkaközi szünet?",
+        options: [
+            "Akkor, ha a munkaidő a heti 36 órát eléri, vagy meghaladja.",
+            "Akkor, ha ezt a munkaszerződésben lefektetik.",
+            "Minden munkában töltött 3 óra után.",
+            "Akkor, ha a munkaidő a napi 6 órát meghaladja."
+        ],
+        correctAnswer: "Akkor, ha a munkaidő a napi 6 órát meghaladja."
+    },
+    {
+        question: "Alapbérként legalább…",
+        options: [
+            "Az öregségi nyugdíjminimum kétszeresének összegét kell megállapítani.",
+            "Az öregségi nyugdíjminimum háromszorosának megfelelő összeget kell megállapítani.",
+            "A kötelező legkisebb munkabért kell meghatározni.",
+            "A garantált bérminimumot kell meghatározni."
+        ],
+        correctAnswer: "A kötelező legkisebb munkabért kell meghatározni."
+    },
+    {
+        question: "Válassza ki a helyes állítást!",
+        options: [
+            "A felmondás a munkaviszony megszűnésének egyik esete.",
+            "A munkaviszony felmondás esetén a felmondás közlésének napján megszűnik.",
+            "A munkaviszony felmondással megszüntethető.",
+            "A munkaviszony felmondás esetén a felmondás közlésének napját követő napon megszűnik."
+        ],
+        correctAnswer: "A munkaviszony felmondással megszüntethető."
+    },
+    {
+        question: "A teljes napi munkaidő…",
+        options: [
+            "6 óra.",
+            "4 óra.",
+            "10 óra.",
+            "8 óra."
+        ],
+        correctAnswer: "8 óra."
+    },
+    {
+        question: "A munkáltató felmondása esetén a felmondási idő a munkáltatónál munkaviszonyban töltött meghatározott számú évek után…",
+        options: [
+            "Is ugyanannyi marad.",
+            "Csökken.",
+            "Növekszik.",
+            "A másfélszeresére növekszik."
+        ],
+        correctAnswer: "Növekszik."
+    },
+    {
+        question: "Ki minősül az alábbi egyéni vállalkozók közül kiegészítő tevékenységet végzőnek?",
+        options: [
+            "Aki saját jogú nyugdíjas.",
+            "Aki tartósan keresőképtelen.",
+            "Aki rokkantsági nyugdíjas.",
+            "Aki ezt választja és öregségi nyugdíjas."
+        ],
+        correctAnswer: "Aki saját jogú nyugdíjas."
+    }
+];
+
         ];
 
         let currentQuestionIndex = 0;
