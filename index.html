@@ -125,96 +125,108 @@
     </div>
     <script>
         const questions = [
-            {
-                question: "A saját tulajdonú, nem kizárólag üzemi célú személygépkocsi esetében költségként elszámolható az üzemanyagköltségen kívül minden más költség címén",
-                options: [
-                    "9 Ft/km.",
-                    "8 Ft/km.",
-                    "15 Ft/km.",
-                    "5 Ft/km."
-                ],
-                correctAnswer: "9 Ft/km."
-            },
-            {
-                question: "Mekkora a társasági adó mértéke? (nyereség után)",
-                options: [
-                    "A pozitív adóalap 4%-a.",
-                    "A pozitív adóalap 7%-a.",
-                    "A pozitív adóalap 5%-a.",
-                    "A pozitív adóalap 9%-a."
-                ],
-                correctAnswer: "A pozitív adóalap 9%-a."
-            },
-            {
-                question: "Mi a számviteli bizonylat?",
-                options: [
-                    "Minden olyan külső és belső okmány, amelyet a gazdasági esemény számviteli elszámolását támasztja alá.",
-                    "Csak az ÁFA törvényben meghatározott tartalommal kiállított számla.",
-                    "Minden olyan kapott számla, amelyet a mérlegkészítés napjáig a vállalkozás megkap.",
-                    "Minden olyan külső és belső okmány, amelyet nyomdai úton állítottak elő."
-                ],
-                correctAnswer: "Minden olyan külső és belső okmány, amelyet a gazdasági esemény számviteli elszámolását támasztja alá."
-            },
-            {
-                question: "Időnorma fogalma:",
-                options: [
-                    "Túlóra.",
-                    "Meghatározott munkafeladat elvégzéséhez szükséges munkaidő, ésszerű szervezési és vezetési feltételek mellett.",
-                    "Napi munkaidő.",
-                    "Meghatározott tevékenység elvégzéséhez szükséges időkeret."
-                ],
-                correctAnswer: "Meghatározott munkafeladat elvégzéséhez szükséges munkaidő, ésszerű szervezési és vezetési feltételek mellett."
-            },
-            {
-                question: "A mérlegben az eszközök és a források",
-                options: [
-                    "Csak a zárómérlegben egyenlőek.",
-                    "Csak a nyitómérlegben egyenlőek.",
-                    "Mindig egyenlők.",
-                    "Sohasem egyenlők."
-                ],
-                correctAnswer: "Mindig egyenlők."
-            },
-            {
-                question: "A személygépkocsi beszerzése esetén az adóalany levonhatja az előzetesen felszámított adót…",
-                options: [
-                    "Ha a beszerzés nem tovább értékesítési céllal történt.",
-                    "Az egyéni vállalkozó taxis, meghatározott feltételek mellett.",
-                    "Ha az adóalany gazdasági tevékenységéhez a személygépkocsi használata feltétlenül szükséges.",
-                    "Nem vonhatja le."
-                ],
-                correctAnswer: "Ha az adóalany gazdasági tevékenységéhez a személygépkocsi használata feltétlenül szükséges."
-            },
-            {
-                question: "Az adózónak az adókötelezettségét érintő változását…",
-                options: [
-                    "15 napon belül be kell jelentenie az adóhatóságnak.",
-                    "5 napon belül be kell jelentenie az adóhatóságnak.",
-                    "3 napon belül be kell jelentenie az adóhatóságnak.",
-                    "10 napon belül be kell jelentenie az adóhatóságnak."
-                ],
-                correctAnswer: "15 napon belül be kell jelentenie az adóhatóságnak."
-            },
-            {
-                question: "Meddig kell benyújtani a bevallást a levont SZJA előlegről?",
-                options: [
-                    "A tárgyhónapot követő hó 20-áig.",
-                    "A tárgyhónapot követő hó 25-éig.",
-                    "Nem kell benyújtani.",
-                    "A tárgyhónapot követő hó 12-éig."
-                ],
-                correctAnswer: "A tárgyhónapot követő hó 20-áig."
-            },
-            {
-                question: "A jogosulatlanul benyújtott adó-visszaigénylés esetén…",
-                options: [
-                    "Mulasztási bírságot állapít meg.",
-                    "Önellenőrzésre szólít fel.",
-                    "Az adóhatóság bírságot állapít meg, ha a kiutalás megtörtént.",
-                    "Az adóhatóság adóbírságot állapít meg."
-                ],
-                correctAnswer: "Az adóhatóság adóbírságot állapít meg."
-            }
+            const moreQuestions = [
+    {
+        question: "Szociális hozzájárulási adó köteles-e a végkielégítés címén kifizetett illetmény?",
+        options: [
+            "Egyéni vállalkozó, társas vállalkozó részére fizetik ki.",
+            "Nem.",
+            "Igen.",
+            "Csak akkor, ha munkaviszonyban álló részére fizetik."
+        ],
+        correctAnswer: "Igen."
+    },
+    {
+        question: "Mely időpont számít a munkaviszony kezdetének?",
+        options: [
+            "A munkaruha átvételének napja.",
+            "Ha a szerződés másképp nem rendelkezik a munkaszerződés megkötését követő nap.",
+            "A munkaszerződés aláírásnak napja.",
+            "A munkaköri leírás átvételének napja."
+        ],
+        correctAnswer: "Ha a szerződés másképp nem rendelkezik a munkaszerződés megkötését követő nap."
+    },
+    {
+        question: "A társadalombiztosítás rendszerében mi minősül járuléknak az alábbi közbevételek közül?",
+        options: [
+            "Egészségbiztosítási járulék.",
+            "Személyi jövedelemadó.",
+            "Egyszerűsített vállalkozó adó.",
+            "Társasági adó."
+        ],
+        correctAnswer: "Egészségbiztosítási járulék."
+    },
+    {
+        question: "Mikor jár a munkavállalónak munkaközi szünet?",
+        options: [
+            "Akkor, ha a munkaidő a heti 36 órát eléri, vagy meghaladja.",
+            "Akkor, ha ezt a munkaszerződésben lefektetik.",
+            "Minden munkában töltött 3 óra után.",
+            "Akkor, ha a munkaidő a napi 6 órát meghaladja."
+        ],
+        correctAnswer: "Akkor, ha a munkaidő a napi 6 órát meghaladja."
+    },
+    {
+        question: "Alapbérként legalább…",
+        options: [
+            "Az öregségi nyugdíjminimum kétszeresének összegét kell megállapítani.",
+            "Az öregségi nyugdíjminimum háromszorosának megfelelő összeget kell megállapítani.",
+            "A kötelező legkisebb munkabért kell meghatározni.",
+            "A garantált bérminimumot kell meghatározni."
+        ],
+        correctAnswer: "A garantált bérminimumot kell meghatározni."
+    },
+    {
+        question: "Válassza ki a helyes állítást!",
+        options: [
+            "A felmondás a munkaviszony megszűnésének egyik esete.",
+            "A munkaviszony felmondás esetén a felmondás közlésének napján megszűnik.",
+            "A munkaviszony felmondással megszüntethető.",
+            "A munkaviszony felmondás esetén a felmondás közlésének napját követő napon megszűnik."
+        ],
+        correctAnswer: "A munkaviszony felmondással megszüntethető."
+    },
+    {
+        question: "A teljes napi munkaidő…",
+        options: [
+            "6 óra.",
+            "4 óra.",
+            "10 óra.",
+            "8 óra."
+        ],
+        correctAnswer: "8 óra."
+    },
+    {
+        question: "A munkáltató felmondása esetén a felmondási idő a munkáltatónál munkaviszonyban töltött meghatározott számú évek után…",
+        options: [
+            "Is ugyanannyi marad.",
+            "Csökken.",
+            "Növekszik.",
+            "A másfélszeresére növekszik."
+        ],
+        correctAnswer: "Növekszik."
+    },
+    {
+        question: "Ki minősül az alábbi egyéni vállalkozók közül kiegészítő tevékenységet végzőnek?",
+        options: [
+            "Aki saját jogú nyugdíjas.",
+            "Aki tartósan keresőképtelen.",
+            "Aki rokkantsági nyugdíjas.",
+            "Aki ezt választja és öregségi nyugdíjas."
+        ],
+        correctAnswer: "Aki saját jogú nyugdíjas."
+    },
+    {
+        question: "Mennyi pihenőidőt kell biztosítani az alkalmazott részére a munka befejezése és a másnapi munkakezdés között a Munka Törvénykönyve szerint?",
+        options: [
+            "Legalább 11 órát.",
+            "Legalább 12 órát.",
+            "Legalább 13 órát.",
+            "Legalább 10 órát."
+        ],
+        correctAnswer: "Legalább 11 órát."
+    }
+
         ];
 
         let currentQuestionIndex = 0;
